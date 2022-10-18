@@ -13,47 +13,8 @@ response = requests.get(completeURL).json()
 
 testResponse = {"deg": 214}
 
-if testResponse["deg"]==0 or testResponse["deg"]==360:
-    print("North")
+directions=["North","North North East","North East","East North East","East","East South East","South East",
+            "South South East","South","South South West","South West","West South West","West","West North West",
+            "North West","North North West"]
 
-elif testResponse["deg"]==90:
-    print("East")
-
-elif testResponse["deg"]==180:
-    print("South")
-
-elif testResponse["deg"]==270:
-    print("West")
-else:
- if testResponse["deg"]<270 and testResponse["deg"]>180:
-    if testResponse["deg"]<225:
-        print("South-South-West")
-    elif testResponse["deg"]==225:
-        print("North-West")
-    else:
-        print("West-South-West")
- elif testResponse["deg"]>270 and testResponse["deg"]<360:
-    if testResponse["deg"]<315:
-        print("West-North-West")
-    elif testResponse["deg"]==315:
-        print("North-West")
-    else:
-        print("North-North-West")
- elif testResponse["deg"]>0 and testResponse["deg"]<90:
-
-    if testResponse["deg"]<45:
-        
-        print("North-North-East")
-    elif testResponse["deg"]==45:
-        print("North-East")
-    else:
-        print("East-North-East")
- elif testResponse["deg"]>90 and testResponse["deg"]<180:
-    if testResponse["deg"]<135:
-        print("East-South-East")
-        pass
-    elif testResponse["deg"]==135:
-        print("South-East")
-        
-    else:
-        print("South-South-East")
+print(directions[int((testResponse["deg"]/22.5)+0.5)%16])
