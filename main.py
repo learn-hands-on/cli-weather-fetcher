@@ -21,7 +21,7 @@ elif testResponse["deg"]==90:
 
 elif testResponse["deg"]==180:
     print("South")
-    
+
 elif testResponse["deg"]==270:
     print("West")
 else:
@@ -31,24 +31,27 @@ else:
     elif testResponse["deg"]==225:
         print("North-West")
     else:
-        print("North-South-West")
+        print("West-South-West")
  elif testResponse["deg"]>270 and testResponse["deg"]<360:
     if testResponse["deg"]<315:
-        print("South-North-West")
+        print("West-North-West")
     elif testResponse["deg"]==315:
         print("North-West")
     else:
         print("North-North-West")
  elif testResponse["deg"]>0 and testResponse["deg"]<90:
+    
     if testResponse["deg"]<45:
+        
         print("North-North-East")
     elif testResponse["deg"]==45:
         print("North-East")
     else:
-        print("South-North-East")
+        print("East-North-East")
  elif testResponse["deg"]>90 and testResponse["deg"]<180:
     if testResponse["deg"]<135:
-        print("North-South-East")
+        print("East-South-East")
+        pass
     elif testResponse["deg"]==135:
         print("South-East")
     else:
