@@ -18,9 +18,10 @@ if testResponse["deg"]==0 or testResponse["deg"]==360:
 
 elif testResponse["deg"]==90:
     print("East")
-    
+
 elif testResponse["deg"]==180:
     print("South")
+    
 elif testResponse["deg"]==270:
     print("West")
 else:
