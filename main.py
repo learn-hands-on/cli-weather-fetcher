@@ -40,7 +40,7 @@ else:
     else:
         print("North-North-West")
  elif testResponse["deg"]>0 and testResponse["deg"]<90:
-    
+
     if testResponse["deg"]<45:
         
         print("North-North-East")
@@ -54,5 +54,6 @@ else:
         pass
     elif testResponse["deg"]==135:
         print("South-East")
+        
     else:
         print("South-South-East")
