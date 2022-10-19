@@ -17,4 +17,4 @@ directions=["North","North North East","North East","East North East","East","Ea
             "South South East","South","South South West","South West","West South West","West","West North West",
             "North West","North North West"]
 
-print(directions[int((testResponse["deg"]/22.5)+0.5)%16])
+print(directions[int((testResponse["deg"]/22.5))%16])
